@@ -16,12 +16,12 @@ const aelGrammar = ohm.grammar(String.raw`Ael {
   Term      = Term ("*"| "/"|"%") Factor      --binary
             | Power				
             | Factor
-  Factor    = id 
-  			    | num                       
+  Factor    = id
+            | num                       
             | ("-" | abs | sqrt) Factor       --unary	
             | "(" Exp ")"                     --parens
-  Power		  = Factor "**" Power		            --exponent
-  			    | Exp
+  Power     = Factor "**" Power		            --exponent
+            | Exp
   num       = digit+ ("." digit+)?
   let       = "let" ~alnum
   print     = "print" ~alnum
