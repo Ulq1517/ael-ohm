@@ -14,7 +14,7 @@ const aelGrammar = ohm.grammar(String.raw`Ael {
   Exp       = Exp ("+" | "-"|"==") Term       --binary 
             | Term
   Term      = Term ("*"| "/"|"%") Factor      --binary
-  			    | Power				
+            | Power				
             | Factor
   Factor    = id 
   			    | num                       
