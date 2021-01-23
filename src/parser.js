@@ -20,7 +20,7 @@ const aelGrammar = ohm.grammar(String.raw`Ael {
             | num                       
             | ("-" | abs | sqrt) Factor       --unary	
             | "(" Exp ")"                     --parens
-  Power     = Factor "**" Power		            --exponent
+  Power     = Factor "**" Power               --exponent
             | Exp
   num       = digit+ ("." digit+)?
   let       = "let" ~alnum
